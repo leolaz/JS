@@ -1,27 +1,28 @@
 <html>
 <head>
-  <meta charset="UTF-8">
-  <title>JS Homework 2: querySelector, date, timeout</title>
-  <script src="js/moment.js"></script>
-  <script src="js/moment-timezone-with-data-2012-2022.js"></script>
+    <meta charset="UTF-8">
+    <title>JS Homework 2: querySelector, date, timeout</title>
+    <script src="js/moment.js"></script>
+    <script src="js/moment-timezone-with-data-2012-2022.js"></script>
 </head>
-<body>
-<!-- Task 2  -->
-  <h1>World time</h1>
-  <ul>
-    <li data-location="london">London - <span class="time">null</span></li>
-    <li data-location="kiev">Kiev - <span class="time">null</span></li>
-    <li data-location="warshawa">Warshawa - <span class="time">null</span></li>
-    <li data-location="los angeles">Los Angeles - <span class="time">null</span></li>
-    <li data-location="new york">New York - <span class="time">null</span></li>
-  </ul>
 
-<script>
-    document.querySelector("li[data-location='london'] span").textContent = moment().tz("Europe/London").format("DD.MM.YYYY - hh:mm");
-    document.querySelector("li[data-location='kiev'] span").textContent = moment().tz("Europe/Kiev").format("DD.MM.YYYY - hh:mm");
-    document.querySelector("li[data-location='warshawa'] span").textContent = moment().tz("Europe/Warsaw").format("DD.MM.YYYY - hh:mm");
-    document.querySelector("li[data-location='los angeles'] span").textContent = moment().tz("America/Los_Angeles").format("DD.MM.YYYY - hh:mm");
-    document.querySelector("li[data-location='new york'] span").textContent = moment().tz("America/New_York").format("DD.MM.YYYY - hh:mm");
-</script>
+<body>
+    <!-- Task 2  -->
+    <h1>World time</h1>
+    <ul>
+        <li data-location="london">London - <span class="time">null</span></li>
+        <li data-location="kiev">Kiev - <span class="time">null</span></li>
+        <li data-location="warshawa">Warshawa - <span class="time">null</span></li>
+        <li data-location="los angeles">Los Angeles - <span class="time">null</span></li>
+        <li data-location="new york">New York - <span class="time">null</span></li>
+    </ul>
+
+    <script>
+        document.querySelector("li[data-location='london'] span").textContent = moment().tz("Europe/London").format("DD.MM.YYYY - hh:mm");
+        document.querySelector("li[data-location='kiev'] span").textContent = moment().tz("Europe/Kiev").format("DD.MM.YYYY - hh:mm");
+        document.querySelector("li[data-location='warshawa'] span").textContent = moment().tz("Europe/Warsaw").format("DD.MM.YYYY - hh:mm");
+        document.querySelector("li[data-location='los angeles'] span").textContent = moment().tz("America/Los_Angeles").format("DD.MM.YYYY - hh:mm");
+        document.querySelector("li[data-location='new york'] span").textContent = moment().tz("America/New_York").format("DD.MM.YYYY - hh:mm");
+    </script>
 </body>
 </html>
