@@ -1,0 +1,49 @@
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Capitalize</title>
+</head>
+
+<body>
+    <h1 id="dupa">Назва Львів дана місту на честь князя Лева Даниловича, сина засновника Львова Данила Галицького.</h1>
+    <script>
+        // 1. Написати функцію, скорочує строку і додає три крапки
+        function truncate(str, maxlength) {
+            return str.substr(0, maxlength).concat("...");
+        }
+        console.log(truncate("рудщ ві віав", 3));
+
+        // 2. Знайти кількість букв "а" в речені "Назва Львів дана місту на честь князя Лева Даниловича, сина засновника Львова Данила Галицького." використовуючи indexOf
+        function findLetter() {
+            var a = 'а';
+            var str = "Назва Львів дана місту на честь князя Лева Даниловича, сина засновника Львова Данила Галицького.";
+            var cnt = 0;
+            while (str.lastIndexOf(a) != -1) {
+                str = str.substring(0, str.lastIndexOf(a));
+                cnt++;
+            }
+            return cnt;
+        }
+        console.log(findLetter());
+
+        // 3. Написати функцію, яка буде фільтрувати рядок і видиляти слова "xxxx" i "polityka"
+        function censor(str){
+            var regex = new RegExp("(xxxx|polityka)");
+            return str.replace(/(xxxx|polityka)/g, "");
+        }
+
+        var text = "gtgtgxxxxgfwe xxxx, polityka"
+        console.log(censor(text));
+
+        // 4. Профільтрувати строку "іва 24 уц ац34434ауку" і виветси тільки цифри
+        function digts(){
+            var str = "іва 24 уц ац34434ауку";
+            return str.replace(/(\D+)/g, "");
+        }
+        console.log(digts());
+    </script>
+</body>
+</html>
